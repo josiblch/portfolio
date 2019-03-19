@@ -1,0 +1,25 @@
+<html>
+    <head>
+           
+            <a href="/index">
+                <div style="text-align: right; margin-bottom: 20px"> 
+                    {{#section back}}
+                    
+                      {{image type=image width=50 height=50}}   
+                    
+                  {{/section}}
+                 </div>
+                </a> 
+    </head>
+    <body>
+        <main>
+
+            {{#section projects}}
+            <h1> {{title}} </h1>
+            {{image type=image width=400 height=540}}
+            {{description type=html}}
+            {{/section}}
+
+        </main>
+    </body>
+</html>
