@@ -25,6 +25,10 @@ header h2 {
   left: 100px;
 }
 
+a {
+  text-decoration: none; /* Gets rid of dirty default underline */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -63,15 +67,14 @@ section:nth-of-type(odd) {
 
 
 .work-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-column-gap: 50px;
+  text-align: center;
 
-  
 }
 .work img{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .work img:hover {
