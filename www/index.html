@@ -11,7 +11,7 @@
     position: absolute;
     top: 87%;
     bottom: auto;
-    margin: 10%;
+    margin: 19%;
   }
 
   .icon2 {
@@ -19,6 +19,8 @@
             right: 5%;
             top: 7%;
         }
+
+        
   
   </style>
 
@@ -40,14 +42,14 @@
 
           <div class="icon2">  
               {{#section iconshome multiple=true}}
-                {{image type=image}} 
+               <a href="{{unfurl}}">{{image type=image}} 
+               </a>
             {{/section}} 
            </div>
      
 
         <p id="welcometext">
-            Lorem ipsum dolor sit amet,
-             consetetur<br> sadipscing elitr.
+            Hi, I'm Josi! A 22-year-old design student <br>based in Dessau, Germany.
           </p>
           
 
@@ -60,9 +62,11 @@
            <div class="work-container">
            <div class="work"> 
               {{#section projects multiple=true}}
+              
               <a href="{{_permalink}}">
                 {{image type=image}}   
               </a>
+            
             {{/section}}
            </div>
           </div>

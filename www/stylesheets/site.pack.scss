@@ -55,8 +55,11 @@ section:nth-of-type(odd) {
 
 #welcometext {
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 700px;
+  font-weight: bold;
+  font-size: 18pt;
+  color: #b73c3d;
 }
 
 
@@ -77,8 +80,11 @@ section:nth-of-type(odd) {
   height: 250px;
 }
 
+
+
 .work img:hover {
   opacity: 0.5;
+  transition: .5s ease;
 }
 
 .icon img{
