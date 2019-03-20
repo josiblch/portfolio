@@ -1,25 +1,58 @@
 <html>
     <head>
+
+    <style> 
+   
+        .icon {
+            position: absolute;
+            right: 7%;
+            top: 10%;
+        }
+
+        /*.worktext {
+            position: absolute;
+            right: 7%;
+            left: 42%;
+            top: 100%;
+            font-size: 13pt;
+        }*/
+
+        
+
+        </style>
+            <link rel="stylesheet" href="/stylesheets/site.css">
+
            
-            <a href="/index">
-                <div style="text-align: right; margin-bottom: 20px"> 
-                    {{#section back}}
-                    
-                      {{image type=image width=50 height=50}}   
-                    
-                  {{/section}}
-                 </div>
-                </a> 
     </head>
     <body>
+        <header>
+            
+        </header>
         <main>
+            
+           
+                <div class="icon">  
+                    {{#section back}}
+                    <a href="/index">
+                      {{image type=image}}  </a>
+                  {{/section}} 
+                 </div>
+           
+                <div class="gallery">
 
-            {{#section projects}}
-            <h1> {{title}} </h1>
-            {{image type=image width=400 height=540}}
-            {{description type=html}}
+                    {{#section gallery multiple=true}}
+                    {{image type=image}}
+                    {{/section}}
+                </div>
+
+            </div>
+           
+            <div class="worktext">
+                {{#section worktext}}
+                {{body type=html}}
+                
+            </div>
             {{/section}}
-
         </main>
     </body>
 </html>
