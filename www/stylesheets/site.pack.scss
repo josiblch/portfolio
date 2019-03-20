@@ -25,7 +25,27 @@ header h2 {
   left: 100px;
 }
 
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  scroll-snap-type: y mandatory; /* Vertikal Scrollen und Snap Points streng einhalten */
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start; /* An der Oberkante jeder Sektion soll gestoppt werden */
+}
+
+section:nth-of-type(even) {
+  background: #ffffff;
+}
+
+section:nth-of-type(odd) {
+  background: #ffffff;
+}
 
 
 
@@ -40,11 +60,13 @@ header h2 {
   width: 100%;
 }
 
+
+
 .work-container {
   display: flex;
   justify-content: center;
   align-items: center;
-margin: 35%;
+
   
 }
 .work img{
@@ -52,9 +74,18 @@ margin: 35%;
   height: 300px;
 }
 
+.work img:hover {
+  opacity: 0.5;
+}
+
 .icon img{
   width: 20px;
   height: 20px;
+}
+
+.icon2 img{
+  width: 40px;
+  height: 40px;
 }
 
 .gallery {

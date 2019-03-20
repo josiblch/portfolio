@@ -4,13 +4,20 @@
   .coverimage {
     position: absolute;
     top: 18%;
+    width:52.7%;
   }
 
   .work {
     position: absolute;
-    top: 145%;
+    top: 105%;
     bottom: auto;
   }
+
+  .icon2 {
+            position: absolute;
+            right: 5%;
+            top: 7%;
+        }
   
   </style>
 
@@ -26,19 +33,16 @@
           
            <h2>Josefine Bloch</h2>
           
-            
-           <div style="text-align: right"> 
-              {{#section icons multiple=true}}
-                {{image type=image}}   
-            {{/section}}
-           </div>
-
-       
-          
-           
        </header>
        
        <main>
+
+          <div class="icon2">  
+              {{#section iconshome multiple=true}}
+                {{image type=image}} 
+            {{/section}} 
+           </div>
+     
 
         <p id="welcometext">
             Lorem ipsum dolor sit amet,
@@ -61,9 +65,13 @@
             {{/section}}
            </div>
           </div>
-         
+        
 
 
        </main>
+       <section></section>       
+       <section></section>
+      
+
     </body>
 </html>
