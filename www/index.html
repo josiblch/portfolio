@@ -23,8 +23,7 @@
         
   
   </style>
-
-        <title>Josefine Bloch Portfolio</title>
+        <title>Josefine Bloch Portfolio</title> 
         <meta charset="utf-8">          <!-- Umlaute -->
 
         <link rel="stylesheet" href="/stylesheets/site.css">
@@ -34,11 +33,7 @@
     <body>
        <header>
           
-           <h2>Josefine Bloch</h2>
-          
-       </header>
-       
-       <main>
+           <h2>Josefine Bloch</h2></div>
 
           <div class="icon2">  
               {{#section iconshome multiple=true}}
@@ -46,10 +41,20 @@
                </a>
             {{/section}} 
            </div>
+
+       </header>
+       
+       <main>
+
+          
      
 
         <p id="welcometext">
-            Hi, I'm Josi! A 22-year-old design student <br>based in Dessau, Germany.
+            Hi, I'm Josi!
+          </p>
+<br>
+          <p id="welcometext2">
+              A 22-year-old design student based in Dessau, Germany.
           </p>
           
 
@@ -60,15 +65,15 @@
            </div>
 
            <div class="work-container">
-           <div class="work"> 
+           <!--<div class="work">--> 
               {{#section projects multiple=true}}
               
-              <a href="{{_permalink}}">
+              <a href="{{unfurl}}">
                 {{image type=image}}   
               </a>
             
             {{/section}}
-           </div>
+           <!--</div>-->
           </div>
         
 

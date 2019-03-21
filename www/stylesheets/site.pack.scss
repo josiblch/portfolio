@@ -16,14 +16,26 @@ html {
   box-sizing: border-box;
 }
 
+
 header h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 1em;
-  position: absolute;
   top: 50px;
   left: 100px;
+  position: fixed;
+  z-index: 99;
 }
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
 
 a {
   text-decoration: none; /* Gets rid of dirty default underline */
@@ -34,20 +46,24 @@ a {
 }
 
 body {
+  position: relative;
   margin: 0;
-  scroll-snap-type: y mandatory; /* Vertikal Scrollen und Snap Points streng einhalten */
+  scroll-snap-type: mandatory; /* Vertikal Scrollen und Snap Points streng einhalten */
 }
 
 section {
+  position: absolute;
   height: 100vh;
   scroll-snap-align: start; /* An der Oberkante jeder Sektion soll gestoppt werden */
 }
 
 section:nth-of-type(even) {
+  top: 100vh;
   background: #ffffff;
 }
 
 section:nth-of-type(odd) {
+  top: 0;
   background: #ffffff;
 }
 
@@ -58,8 +74,17 @@ section:nth-of-type(odd) {
   top: 300px;
   left: 700px;
   font-weight: bold;
-  font-size: 18pt;
-  color: #b73c3d;
+  font-size: 20pt;
+  color: #000000;
+}
+
+#welcometext2 {
+  position: absolute;
+  top: 335px;
+  left: 700px;
+  font-weight: light;
+  font-size: 13pt;
+  color: #000000;
 }
 
 
@@ -70,31 +95,41 @@ section:nth-of-type(odd) {
 
 
 .work-container {
+  top: 100vh;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
   display: grid;
-  grid-column-gap: 50px;
-  text-align: center;
+  grid-template-columns: repeat(3, 250px);
+  grid-column-gap: 10px;
+  align-content: center;
+  justify-content: center;
 
-}
-.work img{
-  width: 250px;
-  height: 250px;
-}
+  img {
+    width: 250px;
+    height: 250px;
+  }
 
-
-
-.work img:hover {
+  img:hover {
   opacity: 0.5;
   transition: .5s ease;
 }
-
-.icon img{
-  width: 20px;
-  height: 20px;
 }
 
+
+
+.icon img{
+  width: 30px;
+  height: 30px;
+}
+
+.icon2 {
+  position: fixed;
+}
 .icon2 img{
   width: 40px;
   height: 40px;
+  
 }
 
 .gallery {
@@ -106,10 +141,20 @@ section:nth-of-type(odd) {
 
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10%;
 }
+
+
 
 .gallery img{
   width: auto;
+  height: 50%;
   display: block;
+  margin: 0.3%;
+  position: relative;
+  top: 210px;  
 }
-
